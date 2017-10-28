@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ima",
+				"image_height"
+			],
+			[
+				"image",
+				"image_width"
+			],
+			[
 				"slide",
 				"slideDistance"
 			],
@@ -271,23 +279,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "create_bmp.py",
-			"settings":
-			{
-				"buffer_size": 1441,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "project.sublime-project",
-			"settings":
-			{
-				"buffer_size": 45,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
@@ -508,10 +499,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 523.0,
-		"last_filter": "hex edi",
+		"height": 267.0,
+		"last_filter": "git push",
 		"selected_items":
 		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
 			[
 				"hex edi",
 				"HexViewer: Show Hex Edit Panel"
@@ -541,24 +544,12 @@
 				"Package Control: Add Repository"
 			],
 			[
-				"git push",
-				"Git: Push"
-			],
-			[
 				"git co",
 				"Git: Commit"
 			],
 			[
 				"git ad",
 				"Git: Add All"
-			],
-			[
-				"git add",
-				"Git: Add All"
-			],
-			[
-				"git comm",
-				"Git: Commit"
 			],
 			[
 				"git p",
@@ -649,7 +640,7 @@
 				"Install Package Control"
 			]
 		],
-		"width": 824.0
+		"width": 888.0
 	},
 	"console":
 	{
@@ -677,6 +668,9 @@
 	],
 	"file_history":
 	[
+		"/C/Projects/Bitmap-Bagel/create_bmp.py",
+		"/C/Projects/Bitmap-Bagel/export_polylist.py",
+		"/C/Users/WilliamLew/Desktop/test_1.bmp",
 		"/C/Projects/Bitmap-Bagel/project.sublime-project",
 		"/C/Projects/Bitmap-Bagel/main.cpp",
 		"/C/Projects/Bitmap/images.bmp",
@@ -775,7 +769,7 @@
 	],
 	"find":
 	{
-		"height": 54.0
+		"height": 47.0
 	},
 	"find_in_files":
 	{
@@ -878,71 +872,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "create_bmp.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1441,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								555,
-								555
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "project.sublime-project",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 45,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 54.0
+		"height": 47.0
 	},
 	"input":
 	{
@@ -991,7 +928,7 @@
 	"project": "project.sublime-project",
 	"replace":
 	{
-		"height": 100.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":
