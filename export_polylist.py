@@ -1,19 +1,19 @@
 import binascii
 
-fin = open('test_1.bmp', 'rb')
+fin = open('test_images/test_1.bmp', 'rb')
 hex = binascii.hexlify(fin.read())
 
 start_pixel_data = int(hex[20:22])
 pixel_data = (hex[(32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2:]).decode('utf-8')
-image_width = int(hex[36:38])
-image_height = int(hex[44:46])
+image_width = int(hex[36:38], 16)
+image_height = int(hex[44:46], 16)
 
 pixels = [[0] * image_height for _ in range(image_width)]
-current_address = 2 + (32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2
+current_address = (32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2
 
 padding_amount = 0
 if (image_width % 4 != 0):
-	padding_amount = 4 - (image_width * 3 % 4)
+	padding_amount = (4 - (image_width * 3 % 4)) * 2
 
 for y in range(image_height):
 	for x in range(image_width):
@@ -24,4 +24,74 @@ for y in range(image_height):
 		current_address += 6
 	current_address += padding_amount
 
-print(pixels)
+vertices = []
+coordinate = [-1, -1]
+direction = 'right'
+complete_circuit = False
+
+for y in range(len(pixels)):
+	for x in range(len(pixels[0])):
+		if (pixels[y][x] != 0):
+			coordinate[0] = x
+			coordinate[1] = y
+			break
+	if (coordinate[0] != -1):
+		break
+
+vertices.append(coordinate)
+
+short_direction = False
+while (complete_circuit == False):
+	if (direction == 'left' and coordinate[0] > 0):
+		if (pixels[coordinate[1]][coordinate[0] - 1] != 0):
+			coordinate = [coordinate[0] - 1, coordinate[1]]
+			short_direction = True
+	elif (direction == 'right' and coordinate[0] < len(pixels[0]) - 1):
+		if (pixels[coordinate[1]][coordinate[0] + 1] != 0):
+			coordinate = [coordinate[0] + 1, coordinate[1]]
+			short_direction = True
+	elif (direction == 'up' and coordinate[1] > 0):
+		if (pixels[coordinate[1] - 1][coordinate[0]] != 0):
+			coordinate = [coordinate[0], coordinate[1] - 1]
+			short_direction = True
+	elif (direction == 'down' and coordinate[1] < len(pixels) - 1):
+		if (pixels[coordinate[1] + 1][coordinate[0]] != 0):
+			coordinate = [coordinate[0], coordinate[1] + 1]
+			short_direction = True
+
+	if (short_direction == False):
+		if (direction == 'left'):
+			if (pixels[coordinate[1] - 1][coordinate[0]] != 0 and coordinate[1] > 0): 
+				vertices.append(coordinate)
+				direction = 'up'
+			elif (pixels[coordinate[1] + 1][coordinate[0]] != 0 and coordinate[1] < len(pixels[0]) - 1): 
+				vertices.append(coordinate)
+				direction = 'down'
+		elif (direction == 'right'):
+			if (pixels[coordinate[1] - 1][coordinate[0]] != 0 and coordinate[1] > 0): 
+				vertices.append(coordinate)
+				direction = 'up'
+			elif (pixels[coordinate[1] + 1][coordinate[0]] != 0 and coordinate[1] < len(pixels) - 1): 
+				vertices.append(coordinate)
+				direction = 'down'
+		elif (direction == 'up'):
+			if (pixels[coordinate[1]][coordinate[0] - 1] != 0 and coordinate[0] > 0): 
+				vertices.append(coordinate)
+				direction = 'left'
+			elif (pixels[coordinate[1]][coordinate[0] + 1] != 0 and coordinate[0] < len(pixels[0]) - 1): 
+				vertices.append(coordinate)
+				direction = 'right'
+		elif (direction == 'down'):
+			if (pixels[coordinate[1]][coordinate[0] - 1] != 0 and coordinate[0] > 0): 
+				vertices.append(coordinate)
+				direction = 'left'
+			elif (pixels[coordinate[1]][coordinate[0] + 1] != 0 and coordinate[0] < len(pixels[0]) - 1): 
+				vertices.append(coordinate)
+				direction = 'right'
+
+	short_direction = False
+
+	if (coordinate == vertices[0]):
+		complete_circuit = True
+
+print(vertices)

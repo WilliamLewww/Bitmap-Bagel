@@ -5,7 +5,7 @@
 		[
 			[
 				"ima",
-				"image_height"
+				"image_width"
 			],
 			[
 				"image",
@@ -279,6 +279,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "export_polylist.py",
+			"settings":
+			{
+				"buffer_size": 941,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
@@ -508,12 +517,16 @@
 				"Git: Push"
 			],
 			[
-				"git comm",
+				"git co",
 				"Git: Commit"
 			],
 			[
 				"git add",
 				"Git: Add All"
+			],
+			[
+				"git comm",
+				"Git: Commit"
 			],
 			[
 				"hex edi",
@@ -542,10 +555,6 @@
 			[
 				"p",
 				"Package Control: Add Repository"
-			],
-			[
-				"git co",
-				"Git: Commit"
 			],
 			[
 				"git ad",
@@ -872,8 +881,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "export_polylist.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
