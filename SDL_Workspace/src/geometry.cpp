@@ -4,6 +4,15 @@ double convertColor(int rgbValue) {
 	return (double)rgbValue / 255;
 }
 
+void drawPolygon(Vector2 position, std::vector<Vector2> vertices, int color[3], int alpha) {
+	glBegin(GL_POLYGON);
+	//glEnable(GL_LINE_SMOOTH);
+	glColor4f(convertColor(color[0]), convertColor(color[1]), convertColor(color[2]), convertColor(alpha));
+	for (int x = 0; x < vertices.size(); x++) { 
+		glVertex2f(position.x + vertices[x].x - (SCREENWIDTH / 2), position.y + vertices[x].y - (SCREENHEIGHT / 2)); }
+	glEnd();
+}
+
 void drawPoint(Vector2 position, int color[3]) {
 	glBegin(GL_POINTS);
 	glColor4f(convertColor(color[0]), convertColor(color[1]), convertColor(color[2]), 1);

@@ -107,9 +107,16 @@ while (complete_circuit == False):
 	if (coordinate == vertices[0]):
 		complete_circuit = True
 
-fout = open('polylist.hex', 'wb')
+# fout = open('polylist.hex', 'wb')
+
+# for vertex in vertices:
+#     fout.write(binascii.unhexlify(''.join(vertex_to_string(vertex).split())))
+
+# fout.close()
+
+fout = open('polylist.txt', 'w')
 
 for vertex in vertices:
-    fout.write(binascii.unhexlify(''.join(vertex_to_string(vertex).split())))
+	fout.write(str(vertex[0]) + ' ' + str(vertex[1]) + ' ')
 
 fout.close()

@@ -4,6 +4,8 @@ void initialize();
 void update(int elapsedTime);
 void render(SDL_Window* window, SDL_GLContext context);
 
+Polylist polyList;
+
 SDL_Event event;
 SDL_GLContext context;
 
@@ -55,6 +57,8 @@ void initialize() {
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	srand(time(NULL));
+
+	polyList.setVertices("polylist.hex");
 }
 
 void update(int elapsedTime) {

@@ -1,5 +1,6 @@
 #pragma once
 #include "src\input.h"
+#include "src\polylist.h"
 #include <SDL2\SDL.h>
 #include <SDL2\SDL_opengl.h>
 #include <ctime>
