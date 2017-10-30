@@ -1,5 +1,4 @@
 #pragma once
-#include "..\main.h"
 #include "vector2.h"
 #include <SDL2\SDL_opengl.h>
 #include <vector>

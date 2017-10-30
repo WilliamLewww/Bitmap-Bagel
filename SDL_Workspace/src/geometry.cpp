@@ -1,5 +1,8 @@
 #include "geometry.h"
 
+static const int SCREENWIDTH = 800, SCREENHEIGHT = 600;
+static const double pi = 3.14159265359;
+
 double convertColor(int rgbValue) {
 	return (double)rgbValue / 255;
 }
