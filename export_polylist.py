@@ -1,12 +1,25 @@
 import binascii
 
-fin = open('test_images/test_1.bmp', 'rb')
-hex = binascii.hexlify(fin.read())
+def vertex_to_string(vertex):
+	temp_string = ''
+	if (len(str(hex(vertex[0]))[2:4]) == 1):
+		temp_string += '0'
+	temp_string += str(hex(vertex[0]))[2:4]
+	temp_string += ' '
+	if (len(str(hex(vertex[1]))[2:4]) == 1):
+		temp_string += '0'
+	temp_string += str(hex(vertex[1]))[2:4]
 
-start_pixel_data = int(hex[20:22])
-pixel_data = (hex[(32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2:]).decode('utf-8')
-image_width = int(hex[36:38], 16)
-image_height = int(hex[44:46], 16)
+	return temp_string
+
+fin = open('test_images/test_1.bmp', 'rb')
+file_hex = binascii.hexlify(fin.read())
+fin.close()
+
+start_pixel_data = int(file_hex[20:22])
+pixel_data = (file_hex[(32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2:]).decode('utf-8')
+image_width = int(file_hex[36:38], 16)
+image_height = int(file_hex[44:46], 16)
 
 pixels = [[0] * image_height for _ in range(image_width)]
 current_address = (32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2
@@ -17,9 +30,9 @@ if (image_width % 4 != 0):
 
 for y in range(image_height):
 	for x in range(image_width):
-		if (int(hex[current_address:current_address + 2], 16) == 0 or
-			int(hex[current_address + 2:current_address + 4], 16) == 0 or
-			int(hex[current_address + 4:current_address + 6], 16) == 0):
+		if (int(file_hex[current_address:current_address + 2], 16) == 0 or
+			int(file_hex[current_address + 2:current_address + 4], 16) == 0 or
+			int(file_hex[current_address + 4:current_address + 6], 16) == 0):
 			pixels[image_height - y - 1][x] = 1
 		current_address += 6
 	current_address += padding_amount
@@ -94,4 +107,9 @@ while (complete_circuit == False):
 	if (coordinate == vertices[0]):
 		complete_circuit = True
 
-print(vertices)
+fout = open('polylist.hex', 'wb')
+
+for vertex in vertices:
+    fout.write(binascii.unhexlify(''.join(vertex_to_string(vertex).split())))
+
+fout.close()

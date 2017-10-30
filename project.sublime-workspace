@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ind",
+				"index_y"
+			],
+			[
+				"inde",
+				"index_x"
+			],
+			[
+				"pixe",
+				"pixel"
+			],
+			[
+				"pi",
+				"pixels"
+			],
+			[
 				"ima",
 				"image_width"
 			],
@@ -283,13 +299,12 @@
 			"file": "export_polylist.py",
 			"settings":
 			{
-				"buffer_size": 941,
-				"encoding": "UTF-8",
+				"buffer_size": 3405,
 				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system": "SDL Project",
 	"build_system_choices":
 	[
 		[
@@ -357,6 +372,26 @@
 				[
 					"Packages/C++/C++ Single File.sublime-build",
 					"Run"
+				]
+			],
+			[
+				"SDL Project",
+				""
+			]
+		],
+		[
+			[
+				[
+					"SDL Project",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
 				]
 			],
 			[
@@ -673,15 +708,27 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Projects/Bitmap-Bagel"
+		"/C/Projects/Bitmap-Bagel",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src"
 	],
 	"file_history":
 	[
-		"/C/Projects/Bitmap-Bagel/create_bmp.py",
-		"/C/Projects/Bitmap-Bagel/export_polylist.py",
-		"/C/Users/WilliamLew/Desktop/test_1.bmp",
 		"/C/Projects/Bitmap-Bagel/project.sublime-project",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/geometry.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/geometry.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/geometry.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/geometry.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/input.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/vector2.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/vector2.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/input.cpp",
+		"/C/Projects/Bitmap-Bagel/export_polylist.py",
 		"/C/Projects/Bitmap-Bagel/main.cpp",
+		"/C/Projects/Bitmap-Bagel/create_bmp.py",
+		"/C/Users/WilliamLew/Desktop/test_1.bmp",
 		"/C/Projects/Bitmap/images.bmp",
 		"/C/Users/WilliamLew/AppData/Roaming/Sublime Text 3/Packages/HexViewer/hex_viewer.sublime-settings",
 		"/C/Users/WilliamLew/AppData/Roaming/Sublime Text 3/Packages/HexViewer/Default (Windows).sublime-keymap",
@@ -887,26 +934,27 @@
 				{
 					"buffer": 0,
 					"file": "export_polylist.py",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 941,
+						"buffer_size": 3405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								47,
-								47
+								1027,
+								1027
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1488.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1012,7 +1060,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 249.0,
+	"side_bar_width": 239.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
