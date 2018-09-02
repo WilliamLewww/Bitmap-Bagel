@@ -12,7 +12,7 @@ def vertex_to_string(vertex):
 
 	return temp_string
 
-fin = open('test_images/test_1.bmp', 'rb')
+fin = open('test_images/board_3.bmp', 'rb')
 file_hex = binascii.hexlify(fin.read())
 fin.close()
 
@@ -21,7 +21,7 @@ pixel_data = (file_hex[(32 * int(str(start_pixel_data)[0:1])) + int(str(start_pi
 image_width = int(file_hex[36:38], 16)
 image_height = int(file_hex[44:46], 16)
 
-pixels = [[0] * image_height for _ in range(image_width)]
+pixels = [[0] * image_width for _ in range(image_height)]
 current_address = (32 * int(str(start_pixel_data)[0:1])) + int(str(start_pixel_data)[1:2]) * 2
 
 padding_amount = 0

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ima",
+				"image_height"
+			],
+			[
+				"ver",
+				"vertex"
+			],
+			[
+				"vert",
+				"vertex"
+			],
+			[
+				"verte",
+				"vertex_to_string"
+			],
+			[
 				"ind",
 				"index_y"
 			],
@@ -18,10 +34,6 @@
 			[
 				"pi",
 				"pixels"
-			],
-			[
-				"ima",
-				"image_width"
 			],
 			[
 				"image",
@@ -296,10 +308,29 @@
 	"buffers":
 	[
 		{
-			"file": "export_polylist.py",
+			"file": "SDL_Workspace/src/geometry.cpp",
 			"settings":
 			{
-				"buffer_size": 3405,
+				"buffer_size": 8460,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "SDL_Workspace/src/geometry.h",
+			"settings":
+			{
+				"buffer_size": 1298,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "polylist.txt",
+			"settings":
+			{
+				"buffer_size": 90,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -710,24 +741,28 @@
 	[
 		"/C/Projects/Bitmap-Bagel",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace",
-		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src"
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src",
+		"/C/Projects/Bitmap-Bagel/test_images"
 	],
 	"file_history":
 	[
-		"/C/Projects/Bitmap-Bagel/project.sublime-project",
-		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.h",
-		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/geometry.h",
+		"/C/Projects/Bitmap-Bagel/export_polylist.py",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/geometry.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/geometry.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.cpp",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.h",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/polylist.h",
+		"/C/Projects/Bitmap-Bagel/create_bmp.py",
+		"/C/Projects/Bitmap-Bagel/SDL_Workspace/src/polylist.cpp",
+		"/C/Projects/Bitmap-Bagel/polylist.hex",
+		"/C/Projects/Bitmap-Bagel/project.sublime-project",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/geometry.cpp",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/geometry.h",
-		"/C/Projects/Bitmap-Bagel/SDL_Workspace/main.cpp",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/input.h",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/vector2.h",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/vector2.cpp",
 		"/C/Projects/Bitmap-Bagel/SDL_Workspace/input.cpp",
-		"/C/Projects/Bitmap-Bagel/export_polylist.py",
 		"/C/Projects/Bitmap-Bagel/main.cpp",
-		"/C/Projects/Bitmap-Bagel/create_bmp.py",
 		"/C/Users/WilliamLew/Desktop/test_1.bmp",
 		"/C/Projects/Bitmap/images.bmp",
 		"/C/Users/WilliamLew/AppData/Roaming/Sublime Text 3/Packages/HexViewer/hex_viewer.sublime-settings",
@@ -839,6 +874,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"points",
+			"hex",
+			"fileLine",
 			"resetVisibleRange",
 			"tempPolygon.emplace_back(railList[0][x]);",
 			"[0]",
@@ -928,36 +966,92 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "export_polylist.py",
-					"semi_transient": true,
+					"file": "SDL_Workspace/src/geometry.cpp",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3405,
+						"buffer_size": 8460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1027,
-								1027
+								5808,
+								5808
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1488.0,
+						"translation.y": 4838.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "SDL_Workspace/src/geometry.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								888,
+								888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "polylist.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 90,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1060,7 +1154,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 239.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -185,6 +185,16 @@ void drawLineStrip(std::vector<Vector2> points, int color[3]) {
 	glEnd();
 }
 
+void drawLineStrip(Vector2 position, std::vector<Vector2> points, int color[3]) {
+	glBegin(GL_LINE_STRIP);
+	//glEnable(GL_LINE_SMOOTH);
+	glColor4f(convertColor(color[0]), convertColor(color[1]), convertColor(color[2]), 1);
+	for (int x = 0; x < points.size(); x++) { 
+		glVertex2f(position.x + points[x].x - (SCREENWIDTH / 2), position.y + points[x].y - (SCREENHEIGHT / 2)); 
+	}
+	glEnd();
+}
+
 void drawPolygon(std::vector<Vector2> points, int color[3], int alpha) {
 	glBegin(GL_POLYGON);
 	//glEnable(GL_LINE_SMOOTH);
